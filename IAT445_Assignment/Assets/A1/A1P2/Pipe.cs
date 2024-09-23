@@ -10,8 +10,8 @@ namespace A1.A1P2
 
         private void Update()
         {
-            transform.position = new Vector3(transform.position.x + moveSpeed * Time.deltaTime, transform.position.y, transform.position.z);
-
+            // transform.position = new Vector3(transform.position.x + moveSpeed * Time.deltaTime, transform.position.y, transform.position.z);
+            transform.position = (Vector3.left * (moveSpeed * Time.deltaTime)) + transform.position;
             if (transform.position.x < endPosition) gameObject.SetActive(false);
         }
     }
